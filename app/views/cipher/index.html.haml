@@ -1,0 +1,7 @@
+%h1 Caesar Cipher
+
+= form_tag('/cipher/index', :method => "post") do
+  = text_area_tag(:message, "test", :size => "24x6", :name => "text")
+  = submit_tag("Submit")
+
+
