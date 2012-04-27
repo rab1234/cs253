@@ -5,6 +5,8 @@ class CipherController < ApplicationController
   end
   
   def submit
+    @text = rot13(decode(params[:text]))
+    render 'index'
   end
   
 

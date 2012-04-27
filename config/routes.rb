@@ -1,6 +1,6 @@
 Cs253::Application.routes.draw do
   get "cipher/index"
-  post "cipher/index"
+  post "cipher/submit"
   root :to => "cipher#index"
 
   # The priority is based upon order of creation:

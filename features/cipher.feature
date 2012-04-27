@@ -9,5 +9,8 @@ Feature: Implement Caesar Cipher
     Then I should see "Caesar Cipher"
     When I fill in "text" with "abcdef" 
     And I press "Submit"
-    Then I should see "nopqrs"
+    Then I should see "nopqrs"  
+    When I fill in "text" with "<b>Randy</b>"
+    And I press "Submit"
+    Then I should see "<o>Enaql</o>"
     
