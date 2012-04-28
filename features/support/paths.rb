@@ -16,6 +16,9 @@ module NavigationHelpers
     when /^the home\s?page$/
       '/cipher/index'
 
+    when /^the signup\s?page$/
+      '/users/signup'
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

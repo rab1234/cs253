@@ -1,0 +1,17 @@
+%h1 Users Signup
+%p
+= form_for @user, :url => { :action => "signup" }, :html => {:class => "nifty_form"} do |f|
+  = f.label :username, "Username"
+  = f.text_field :username, :name => "username"
+  %br
+  = f.label :pw, "Password"
+  = f.text_field :pw, :name => "pw"
+  %br
+  = f.label :pw_confirmation, "Password Confirmation"
+  = f.text_field :pw_confirmation, :name => "pw_confirmation"
+  %br
+  = f.label :email, "Email"
+  = f.text_field :email, :name => "email"
+  %br
+  = f.submit "Submit"
+  

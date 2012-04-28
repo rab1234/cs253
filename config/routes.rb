@@ -1,4 +1,8 @@
 Cs253::Application.routes.draw do
+  get "users/signup"
+  post "users/signup"
+  get "users/welcome"
+
   get "cipher/index"
   post "cipher/submit"
   root :to => "cipher#index"
