@@ -1,17 +1,26 @@
-%h1 Users Signup
+%h1 User Signup
 %p
-= form_for @user, :url => { :action => "signup" }, :html => {:class => "nifty_form"} do |f|
+= form_for @user, :url => { :action => "signup" }, :html => {:class => "signup_form"} do |f|
+  #msg= @user.errors.full_messages
   = f.label :username, "Username"
+  %br
   = f.text_field :username, :name => "username"
-  %br
+  = flash[:username]
+  %p
   = f.label :pw, "Password"
+  %br
   = f.text_field :pw, :name => "pw"
-  %br
+  = flash[:pw]
+  %p
   = f.label :pw_confirmation, "Password Confirmation"
+  %br
   = f.text_field :pw_confirmation, :name => "pw_confirmation"
-  %br
+  = flash[:pw_conf]
+  %p
   = f.label :email, "Email"
-  = f.text_field :email, :name => "email"
   %br
+  = f.text_field :email, :name => "email"
+  = flash[:email]
+  %p
   = f.submit "Submit"
   

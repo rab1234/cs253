@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
   validates_presence_of :pw
   validates_confirmation_of :pw
+  #validates_presence_of :pw_confirmation
   validates_format_of :username, :with => USERNAME_REGEX
   validates_format_of :pw, :with => PW_REGEX
   validates_format_of :email, :with => EMAIL_REGEX
